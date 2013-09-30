@@ -14,15 +14,15 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/reveal.min.css">
         <link rel="stylesheet" href="css/theme/default.css" id="theme">
 
         <!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <link rel="stylesheet" href="lib/css/zenburn.css">
 
         <!-- If the query includes 'print-pdf', use the PDF print sheet -->
         <script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+            document.write('<link rel="stylesheet" href="css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
         </script>
 
         <!--[if lt IE 9]>
@@ -37,13 +37,181 @@
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section>
-                    <h1>NetBeans QC</h1>
-                    <h3>Insides to community-based testing</h3>
+                    <h2>NetBeans NetCat and QC</h2>
+                    <h4>Insides to community-based testing</h4>
                     <p>
-                        <small>by markiewb</small>
+                        <small>by markiewb @benM4</small>
                     </p>
+                    section>h2+ul+
+                    section>h2+(ul>li*2)+section>(h3+(ul>li*2))
                 </section>
 
+                <section>
+                    <h2>What is NetBeans?</h2>
+                    <ul>
+                        <li>Rich Client Platform based on Swing -> <a href="https://platform.netbeans.org/screenshots.html">Showcase</a></li>
+                        <li>IDE for JavaSE, JaveEE, PHP, C++... </li>
+                        <li>15th anniversary in 2013</li>
+                        <li><a href="https://netbeans.org/">https://netbeans.org/</a></li>
+                    </ul>
+                    <br/>
+                    <img src="images/NB-IDE-logo.png" alt="" style="background-color: white"/>
+                    <img src="images/NB-Platform-logo.png" alt="" style="background-color: white"/>
+                </section>
+                <section data-markdown>
+                    <section>
+
+                        <h2>What is NetCat?</h2>
+
+                        NetBeans Acceptance Testing (crowd based)  <img src="images/Netcat_logo.png" alt="" /><br/>
+                       <br/>
+                        <br/>
+                        
+                        Why? 
+                        <img src="images/missingresources.png" alt="" width="70%"/>
+
+                        <a href="http://wiki.netbeans.org/NetCAT">http://wiki.netbeans.org/NetCAT</a>
+                        <a href="http://wiki.netbeans.org/FaqNetCAT">http://wiki.netbeans.org/FaqNetCAT</a>
+                    </section>
+
+                    <section>
+                        <h2>NetCAT-tribes</h2>
+                        <ul>
+                            <li>One leader per tribe - real world project users</li>
+                            <li>Review and execution of TS</li>
+                            <li>Review of tutorials</li>
+                            <li>Bugs and exceptions reports get more attention</li>
+                            <li>Gamification (points, shirts, recommendations...)</li>
+                            <li>NetCat Community Leader Jiri Kovalsky</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h4>Jiri Kovalsky - Community Leader</h4>
+                        <ul>
+                            <li><a href="http://netbeans.dzone.com/netbeans-team-interview-jiri-kovalsky">Interview at dzone</a></li>
+                            <li><a href="http://article.gmane.org/gmane.comp.java.netbeans.netcat/29709">At JavaOne 2013</a></li>
+                            <li><img src="images/jirka.jpg" alt="" /></a></li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <h2>Collaboration</h2>
+                    <ul>
+                        <li>Email (mirrored in forum)</li>
+                        <li><a href="http://wiki.netbeans.org">Wiki</a></li>
+                        <li>Google Drive</li>
+                        <li><a href="http://services.netbeans.org/dashboard/web/index.php?version=7.4">Dashboard</a></li>
+                        <li>Weekly Status Update by Jirka
+                            <ul>
+                                <li><a href="https://netbeans.org/projects/www/lists/netcat/archive/2013-09/message/200">Example</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Break the rules - Intellij IDEA</h2>
+                    <ul>
+                        <li>Data-driven tests</li>
+                        <li>No feature specs</li>
+                        <li>No test specs</li>
+                        <li>"Full-time dogfooding"</li>
+                        <li>"HEAD is a usable IDE every single day"</li>
+                        <li>Crowd based testing - <a href="http://confluence.jetbrains.com/display/IDEADEV/IDEA+13+EAP">EAP program</a></li>
+                        <li>Gamification - win licenses</li>
+                        <li>Info based on <a href="http://de.slideshare.net/intelliyole/from-renamertopolyglotide">http://de.slideshare.net/intelliyole/from-renamertopolyglotide</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Continuous Integration</h2>
+                    <ul>
+                        <li>Hudson @ <a href="http://deadlock.netbeans.org/">http://deadlock.netbeans.org/</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Automatic functional testing</h2>
+                    <ul>
+                        <li>UI-tests based on Jelly/Jemmy
+                            <ul>
+                                <li><a href="http://wiki.netbeans.org/Writing_JellyTools_Tests_Guide">http://wiki.netbeans.org/Writing_JellyTools_Tests_Guide</a></li>
+                                <li><a href="http://wiki.netbeans.org/GUI_Test_Stability_Guidelines">http://wiki.netbeans.org/GUI_Test_Stability_Guidelines</a></li>
+                            </ul>
+                        </li>
+                        <li>Tests must pass before integration in more stable repo</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Mercurial & Pre integration testing</h2>
+                    <ul>
+                        <li>Mercurial - <a href="http://hg.netbeans.org/">http://hg.netbeans.org/</a></li>
+                        <li>Parallel Repo Integration - Pre integration testing
+
+                            <ul>
+                                <li>
+                                    Why? 
+                                    <ul>
+                                        <li>"Codebase not compilable for 8 weeks." Missed 2500 bugs - #12</li>
+                                    </ul>
+                                </li>
+
+                                <li>How?
+                                    <ul>
+                                        <li>project repos: <code>jet-main/web-main/...</code></li>
+                                        <li><code>main-silver</code> (integrates project repos, failure rejects update)</li>
+                                        <li><code>main-golden</code> (pulled from stable silver + artifacts)</li>
+                                        <li><a href="http://wiki.netbeans.org/HgParallelProjectIntegration">http://wiki.netbeans.org/HgParallelProjectIntegration</a></li>
+                                        <li><a href="http://wiki.netbeans.org/WorkingWithNetBeansSources">http://wiki.netbeans.org/WorkingWithNetBeansSources</a></li>
+                                    </ul>
+                                </li>                            
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Issue tracking</h2>
+                    <ul>
+                        <li>Bugzilla @ <a href="https://netbeans.org/bugzilla/">https://netbeans.org/bugzilla/</a></li>
+                        <li>Used by community and devs</li>
+                        <li>Issue-lifecycle (pretty standard)
+                            <ul>
+                                <li><a href="http://wiki.netbeans.org/IssueLifeCycle">http://wiki.netbeans.org/IssueLifeCycle</a></li>
+                                <li><a href="http://wiki.netbeans.org/wiki/images/6/6e/Bug-life-cycle_IssueLifeCycle.png">http://wiki.netbeans.org/wiki/images/6/6e/Bug-life-cycle_IssueLifeCycle.png</a></li>
+                            </ul>
+                        <li><a href="http://wiki.netbeans.org/BugPriorityGuidelines">Priority guideline</a></li>
+                        <li>Duplicates raise the priority</li>
+                        <li>Exceptions reporter with similarity detection and statistics <a href="http://statistics.netbeans.org/analytics/">http://statistics.netbeans.org/analytics/</a></li>
+                    </ul>
+                </section>
+
+                
+                <section>
+                    <h2>Bug-Dashboard</h2>
+                    <ul>
+                        <li>Dashboard (<a href="http://services.netbeans.org/dashboard/web/index.php">all</a> | <a href="http://services.netbeans.org/dashboard/web/netcat.php?version=7.4">by NetCats</a> | <a href="http://services.netbeans.org/dashboard/web/user.php?username=markiewb&version=7.4">by user</a>)</li>
+                    </ul>
+                        <img src="images/dashboard.png" alt="" />
+                </section>
+                <section>
+                    <h2>Tutorials</h2>
+                    <ul>
+                        <li><a href="http://wiki.netbeans.org/NetBeansTutorialsForCommunityReview">NetBeansTutorialsForCommunityReview</a></li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Planing</h2>
+                    <ul>
+                        <li>Global feature plan - <a href="http://wiki.netbeans.org/NetBeans_74">example</a></li>
+                        <li>More detailed plan per component - <a href="http://wiki.netbeans.org/EditorPlan74">example</a></li>
+                    </ul>
+                </section>
+                
                 <section>
                     <h2>Table of content</h2>
                     <ul>
@@ -53,6 +221,29 @@
                         <li></li>
                         <li></li>
                     </ul>
+                </section>
+                <section>
+                    <h2>Test specs</h2>
+                    <ul>
+                        <li>http://blog.idrsolutions.com/2013/09/testing-netbeans-7-4/</li>
+                    </ul>
+
+                    <section>
+                        <h3>Test spec review</h3>
+                        <img src="images/TestPlan.png" alt=""/>
+                    </section>
+                    <section>
+                        <h3>Progress page</h3>
+                        <img src="images/TestPlan.png" alt=""/>
+                    </section>
+                    <section>
+                        <h3>Test spec</h3>
+                        <img src="images/testspec.png" alt=""/>
+                    </section>
+                    <section>
+                        <h3>Single test</h3>
+                        <img src="images/SingleTest.png" alt=""/>
+                    </section>
                 </section>
                 <section>
                     <h2>Bugtracker</h2>
